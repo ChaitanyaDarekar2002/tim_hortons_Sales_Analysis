@@ -1,11 +1,11 @@
-☕ Tim Hortons Business Performance Dashboard
+# ☕ Tim Hortons Business Performance Dashboard
 An end-to-end Power BI project analyzing sales, profitability, customer behavior, and store performance for a simulated Tim Hortons retail network across Canada — built as a portfolio case study by Akash Gahlot.
 
  Tim.Hortans.Video.mp4 
-📌 Project Overview
+# 📌 Project Overview
 This project simulates a full Business/Data Analyst workflow: taking raw transactional sales data, modeling it into a clean star schema, and building a multi-page interactive Power BI dashboard that surfaces revenue, profitability, customer, and geographic insights for stakeholders.
 
-Business questions this dashboard answers:
+### Business questions this dashboard answers:
 
 How is revenue and profit trending over time, and which stores/categories drive it?
 Which products are the top revenue and profit generators?
@@ -13,52 +13,45 @@ How do new vs. returning customers behave, and what drives retention?
 Which regions, provinces, and cities are the strongest and weakest performers?
 When (day of week / time of day) do customers order the most?
 
-🗂️ Dataset
+# 🗂️ Dataset
 File: Tim_Hortons_Portfolio_Dataset.xlsx
 Rows: ~17,445 transactions
 Grain: One row per order line item
-Field	Description
-OrderID, OrderDate, OrderTime	Transaction identifiers and timestamps
-Year, Quarter, Month, Day, DayName, Hour	Date/time breakdowns for time-based analysis
-Store, City	Store location details
-Category, Product, Size	Product hierarchy
-Quantity, UnitPrice, Discount	Order line details
-Revenue, Cost, Profit	Financial metrics
-PaymentMethod	Credit Card / Cash / Debit Card
-CustomerType	New / Returning
 The dataset spans stores in Toronto (Downtown & North), Montreal, Vancouver, Ottawa, and Calgary, across five product categories: Coffee, Sandwich, Bakery, Tea, and Desserts.
 
-🧩 Data Model
+# 🧩 Data Model
 A star schema was built in Power Query / Power BI to support efficient, scalable analysis:
 
+**SalesData (fact table)** — transaction-level revenue, cost, profit, and discount
 
+**DimDate** — full date hierarchy (day, day name, month, weekend flag) for time intelligence
 
-SalesData (fact table) — transaction-level revenue, cost, profit, and discount
-DimDate — full date hierarchy (day, day name, month, weekend flag) for time intelligence
-DimStore / Total Store — store and city reference
-DimLocation — city, province, and region mapping for geographic rollups
-DimProduct — category and product reference
+**DimStore / Total Store** — store and city reference
+
+**DimLocation** — city, province, and region mapping for geographic rollups
+
+**DimProduct** — category and product reference
+
 This structure enables clean, reusable relationships across all report pages and supports DAX measures like profit margin, retention %, and average order value.
 
-📊 Dashboard Pages
+
+
+# 📊 Dashboard Pages
 1. Executive Overview
-High-level KPIs (Revenue, Profit, Orders, Units Sold, Profit Margin) with revenue trends over time, revenue by store and category, and top 5 products by revenue.
+
 
 
 
 2. Product & Category Analysis
-Deep dive into product-level performance — top products by revenue and profit, category revenue mix, and a full product performance summary table with margin breakdowns.
+
 
 
 
 3. Customer & Sales Behavior
-Customer segmentation (new vs. returning), revenue by day of week and time of day, profit by payment method, and a 12-month customer retention trend.
 
 
 
 4. Store & Geographic Analysis
-Store and regional performance comparison, revenue by province (map visual), revenue by city, and a revenue heatmap across Canadian cities.
-
 
 
 All pages include interactive slicers for Month, Region, Store, Category, and Customer Type, allowing dynamic filtering across the entire report.
