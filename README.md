@@ -40,8 +40,9 @@ This structure enables clean, reusable relationships across all report pages and
 
 
 # 📊 Dashboard Pages
-1. Executive Overview
+1. **Executive Overview**
 
+<img width="1907" height="980" alt="Screenshot 2026-08-31 150459" src="https://github.com/user-attachments/assets/6c21a450-23be-4e97-ae13-c3d36bf2801b" />
 
 
 
