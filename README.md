@@ -59,62 +59,69 @@ This structure enables clean, reusable relationships across all report pages and
 
 All pages include interactive slicers for Month, Region, Store, Category, and Customer Type, allowing dynamic filtering across the entire report.
 
-📐 Key DAX Measures
-Total Revenue         := SUM(FactSales[Revenue])
-Total Profit          := SUM(FactSales[Profit])
-Total Orders          := DISTINCTCOUNT(FactSales[OrderID])
-Total Quantity        := SUM(FactSales[Quantity])
-Average Order Value   := DIVIDE([Total Revenue], [Total Orders])
-Profit Margin %       := DIVIDE([Total Profit], [Total Revenue])
+## 📐 Key DAX Measures
+**Total Revenue**         := SUM(FactSales[Revenue])
+
+**Total Profit**         := SUM(FactSales[Profit])
+
+**Total Orders**          := DISTINCTCOUNT(FactSales[OrderID])
+
+**Total Quantity**        := SUM(FactSales[Quantity])
+
+**Average Order Value**   := DIVIDE([Total Revenue], [Total Orders])
+
+**Profit Margin %**       := DIVIDE([Total Profit], [Total Revenue])
+
 DIVIDE() is used instead of the / operator throughout to avoid divide-by-zero errors when slicers filter data down to nothing.
+
 DISTINCTCOUNT is used for Total Orders (rather than a simple row count) because a single order can span multiple line items — one row per product, not per order.
-✨ Dashboard Features
-4-page interactive report — Executive Overview, Product & Category Analysis, Customer & Sales Behavior, and Store & Geographic Analysis
-Cross-page slicers — Month, Region, Store, Category, and Customer Type filters that dynamically update every visual on the page
-Custom KPI cards — Revenue, Profit, Orders, Units Sold, and Profit Margin surfaced at a glance on every page
-Time intelligence — revenue trends by month, day of week, and hour of day using the DimDate table
-Geographic visuals — map-based revenue by province, revenue heatmap by city, and regional performance comparisons
-Customer analytics — new vs. returning segmentation, retention trend over 12 months, and revenue by payment method
-Custom-branded UI — Tim Hortons–themed color palette, iconography, and page navigation designed for a polished, stakeholder-ready look
-Fully responsive filtering — all measures use DIVIDE() and DISTINCTCOUNT patterns so KPIs stay accurate under any slicer combination, including edge cases where filters return no data
-🔑 Key Insights
-Total Revenue: $254.58K | Total Profit: $95.61K | Profit Margin: 37.6%
+
+## ✨ Dashboard Features
+**4-page interactive report** — Executive Overview, Product & Category Analysis, Customer & Sales Behavior, and Store & Geographic Analysis
+
+**Cross-page slicers** — Month, Region, Store, Category, and Customer Type filters that dynamically update every visual on the page
+
+**Custom KPI cards** — Revenue, Profit, Orders, Units Sold, and Profit Margin surfaced at a glance on every page
+
+**Time intelligence** — revenue trends by month, day of week, and hour of day using the DimDate table
+
+**Geographic visuals** — map-based revenue by province, revenue heatmap by city, and regional performance comparisons
+
+**Customer analytics** — new vs. returning segmentation, retention trend over 12 months, and revenue by payment method
+
+**Custom-branded UI** — Tim Hortons–themed color palette, iconography, and page navigation designed for a polished, stakeholder-ready look
+
+**Fully responsive filtering** — all measures use DIVIDE() and DISTINCTCOUNT patterns so KPIs stay accurate under any slicer combination, including edge cases where filters return no data
+
+## 🔑 Key Insights
+
+**Total Revenue**: $254.58K | **Total Profit**: $95.61K | **Profit Margin**: 37.6%
+
 Coffee is the dominant category, generating $131.62K in revenue — more than 2x the next closest category (Sandwich, $45.40K)
+
 Cappuccino, Cold Brew, and Americano are the top 3 products by both revenue and profit
+
 Toronto Downtown is the top-performing store at $89K revenue, nearly double the next store
+
 Returning customers drive the majority of revenue ($164.51K vs. $90.07K from new customers), with retention holding steady around 50–60% monthly
+
 Saturday is the highest-revenue day; afternoon (12 PM–3 PM) is the peak ordering window
+
 Central region (Toronto/Montreal/Ottawa) contributes $201.40K vs. $53.18K from the West (Vancouver/Calgary)
-🛠️ Tools & Skills
-Power BI Desktop — data modeling, DAX measures, interactive report design
-Power Query — data cleaning and transformation
-Excel — source data structuring
-DAX — calculated KPIs (Profit Margin, Retention %, Avg. Order Value, Avg. Customer Spend)
+
+## 🛠️ Tools & Skills
+**Power BI Desktop** — data modeling, DAX measures, interactive report design
+
+**Power Query** — data cleaning and transformation
+
+**Excel** — source data structuring
+
+**DAX** — calculated KPIs (Profit Margin, Retention %, Avg. Order Value, Avg. Customer Spend)
+
 Dashboard UI/UX design (custom Tim Hortons–themed branding, navigation, and layout)
 
-📁 Repository Structure
-Tim-Hortons-Business-Performance-Dashboard
-│
-├── Dashboard
-│   └── Tim_Hortans.pbix
-│
-├── Dataset
-│   └── Tim_Hortons_Portfolio_Dataset.xlsx
-│
-├── Dashboard Images
-│   ├── Executive_Overview_.png
-│   ├── Product___Category_.png
-│   ├── Customer___Sales_Behavior.png
-│   ├── Store___Geogephic_Analysis.png
-│   └── Data_Model.png
-│
-├── Documentation
-│   ├── Project Report.pdf
-│   ├── Business Requirements.pdf
-│   └── Dashboard Walkthrough.pdf
-│
-└── README.md
-👨‍💻 About Me
+
+## 👨‍💻 About Me
 
 I'm an aspiring Business Analyst passionate about transforming data into actionable insights through interactive dashboards, business intelligence, and data storytelling.
 
