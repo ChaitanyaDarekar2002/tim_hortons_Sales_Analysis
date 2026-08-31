@@ -45,8 +45,9 @@ This structure enables clean, reusable relationships across all report pages and
 
 
 
-2. Product & Category Analysis
+2. **Product & Category Analysis**
 
+<img width="1906" height="976" alt="Screenshot 2026-08-31 150518" src="https://github.com/user-attachments/assets/6e961ed3-c4b0-486a-9566-0c5fba01ff8a" />
 
 
 
