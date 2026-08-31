@@ -50,8 +50,9 @@ This structure enables clean, reusable relationships across all report pages and
 
 
 
-3. Customer & Sales Behavior
+3. **Customer & Sales Behavior**
 
+<img width="1907" height="975" alt="Screenshot 2026-08-31 150541" src="https://github.com/user-attachments/assets/21141f63-4a6c-40d3-aea9-431015726adf" />
 
 
 4. **Store & Geographic Analysis**
