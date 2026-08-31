@@ -54,7 +54,10 @@ This structure enables clean, reusable relationships across all report pages and
 
 
 
-4. Store & Geographic Analysis
+4. **Store & Geographic Analysis**
+
+<img width="1907" height="979" alt="Screenshot 2026-08-31 150610" src="https://github.com/user-attachments/assets/6d4d2ef2-1ded-42d1-9ea7-6fcf8562d78b" />
+
 
 
 All pages include interactive slicers for Month, Region, Store, Category, and Customer Type, allowing dynamic filtering across the entire report.
